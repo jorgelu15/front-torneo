@@ -10,7 +10,7 @@ const Footer: FC<FooterProps> = () => (
       <span className='footer-div footer-div-medium'>Política de Privacidad</span>
       <span className='footer-div'>Acerca de Nosotros</span>
     </div>
-    <div className='footer-div margin-button20px'>HyperPlay, SAS todos los derechos reservados</div>
+    <div className='footer-div mb20'>HyperPlay, SAS todos los derechos reservados</div>
   </div>
 );
 

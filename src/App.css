@@ -5,15 +5,49 @@
   --var:.text-white{
     color: white;
   } 
+
 }
+/* ===== Scrollbar CSS ===== */
+  /* Chrome, Edge, and Safari */
+  body::-webkit-scrollbar {
+    width: 10px;
+    background: #ffffff;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: #000000;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 10px;
+  } 
+  
 .w-fit{
   width: 100% !important;
 }
+/* 777777777777777777 */
+.df{
+  display: flex;
+}
+.df-col{
+  display: flex;
+  flex-direction: column;
+}
+.ai-c{
+  align-items: center;
+}
+/* 777777777777777777  faltan los jf solos*/
 .fd-column{
   flex-direction: column !important;
 }
 .ai-start{
   align-items: start !important;
+}
+.mt20{
+  margin-top: 20px;
+} 
+.mb20{
+  margin-bottom: 20px;
 }
 .jf-center{
   display: flex;
@@ -42,21 +76,26 @@
 .footer{
   /* background-color: rgb(255, 0, 0); */
   color: white;
-  position: absolute;
-  bottom: 0;
+
   width: 100%;
 }
 .footer-div{
   /* background-color: rgb(255, 0, 0); */
   padding: 0px 40px;
-  margin: 20px;
+  margin: 10px;
   font-size: 18px;
 }
+.mb20{
+  margin-bottom: 20px !important;
+}
 .margin-button20px{
-  margin-bottom: 50px !important;
+  margin-bottom: 20px !important;
 }
 .margin-top20px{
   margin-top: 20px !important;
+}
+.padding-top20px{
+  padding-top: 20px !important;
 }
 .footer-div-medium{
   border-right: #056cf2 solid 1px;
@@ -101,7 +140,9 @@
   background-color: black;
   background-image: linear-gradient(0deg, rgba(4,0,1,1) 19%, rgba(4,0,1,0.7987570028011204) 25%, rgba(4,0,1,0) 76%),linear-gradient(180deg, rgba(4,0,1,1) 0%, rgba(4,0,1,0.7063200280112045) 11%, rgba(4,0,1,0) 24%), url("/public/img/fondo1.png");
   background-repeat: no-repeat;
-  background-size: 100% 75%;
+  background-size: 100% 76%;
+  background-attachment: fixed;
+
 }
 .fondo-negro{
   background-color: black;
@@ -116,7 +157,7 @@
   bottom: 1px;
 }
 .div-form{
-  height: 75%;
+  margin: 20px 0;
 }
 .form{
   width: 600px;
@@ -151,6 +192,25 @@
   border-style: none;
   &:focus {
     outline-color: #056cf2;
+  }
+  &::placeholder{
+    color: #7b7e7e;
+  }
+}
+.input-transparent{
+  background-color: rgba(1, 1, 1, 0);
+  color: #cfcfcf;
+  height: 100%;
+  width: 17rem;
+
+  padding: 10px 8px;
+  font-size: 16px;
+  border: 1px solid #056cf2;
+  outline: 2px solid transparent; /* Inicialmente sin borde */
+  border-radius: 4px;
+  box-shadow: none;
+  &:focus {
+    outline-color: #0370ff;
   }
   &::placeholder{
     color: #7b7e7e;
@@ -196,6 +256,17 @@ input[type="file"] {
 .custom-file-upload:hover {
   background-color: #5e5d5d;
 }
+
+.card{
+  width: 250px;
+  height: 180px;
+  padding: 10px;
+  margin: 4px;
+  background: rgb(0,71,190);
+  background: linear-gradient(297deg, rgba(0,71,190,1) 0%, rgba(0,35,129,1) 13%, rgba(0,12,115,1) 33%, rgba(33,67,181,1) 82%, rgba(69,125,252,1) 95%);
+  border-radius: 10px;
+  cursor: pointer;
+}
 /* //////////////////////////////// */
 .text-gray{
   color: #7c7c7c;
@@ -206,6 +277,16 @@ input[type="file"] {
 .helpertext{
   color: #0473d6;
 }
+.fs12{
+  font-size: 12px;
+}
+.fs20{
+  font-size: 20px;
+}
+.fs40{
+  font-size: 40px;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

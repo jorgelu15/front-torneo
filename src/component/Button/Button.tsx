@@ -6,13 +6,17 @@ interface ButtonProps {
   height?: string;
   width?: string;
   padding?: string;
+  display?: string;
+  margin?: string;
 }
 
-const Button: FC<ButtonProps> = ({width,height,padding, children}) => {
+const Button: FC<ButtonProps> = ({width,height,padding,display,margin, children}) => {
   const aStyle = {
     height: height !== "" ? height : undefined,
     width: width !== "" ? width : undefined,
-    padding: padding !== "" ? padding : undefined
+    padding: padding !== "" ? padding : undefined,
+    display: display !== "" ? display : undefined,
+    margin: margin !== "" ? margin : undefined
   };
   return (
   <div style={aStyle}>
