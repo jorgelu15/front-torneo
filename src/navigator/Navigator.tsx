@@ -10,6 +10,7 @@ import DashBoard from "../views/DashBoard/DashBoard";
 import Organizer from "../views/Organizer/Organizer";
 import TournamentStaff from "../views/TournamentStaff/TournamentStaff";
 import Tourneys from "../views/Tourneys/Tourneys";
+import Results from "../views/Results/Results";
 const Navigator = () => {
     return ( 
         <Routes>
@@ -52,6 +53,10 @@ const Navigator = () => {
             <Route
                 path={routes.tourneys}
                 element={<Tourneys />}
+            />
+            <Route
+                path={routes.tourneysCreated}
+                element={<Results />}
             />
         </Routes>
      );
