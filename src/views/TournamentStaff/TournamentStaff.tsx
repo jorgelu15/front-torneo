@@ -29,7 +29,7 @@ const TournamentStaff: FC<TournamentStaffProps> = () => (
         </div>
         <hr className='hr'/>
         <div className='jf-center w100'>
-          <p className='text-gray w50'>JORGUE GUARDO ESTUDIANTE ACTIVO</p>
+          <p className='text-gray w50'>JORGE GUARDO ESTUDIANTE ACTIVO</p>
           <p className='text-gray w50'>Propietario</p>
         </div>
         <div className="w100 jf-center">
@@ -54,7 +54,6 @@ const TournamentStaff: FC<TournamentStaffProps> = () => (
             </ContentInputs>    
           </div>  
         </div>
-        
         
         <div className="form-div text-bold w100 margin-top20px">
           <Button width='100%'>Terminar</Button>

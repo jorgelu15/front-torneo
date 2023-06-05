@@ -11,6 +11,9 @@ import Organizer from "../views/Organizer/Organizer";
 import TournamentStaff from "../views/TournamentStaff/TournamentStaff";
 import Tourneys from "../views/Tourneys/Tourneys";
 import Results from "../views/Results/Results";
+import Inscription from "../views/Inscription/Inscription";
+
+
 const Navigator = () => {
     return ( 
         <Routes>
@@ -57,6 +60,10 @@ const Navigator = () => {
             <Route
                 path={routes.tourneysCreated}
                 element={<Results />}
+            />
+            <Route
+                path={routes.inscription}
+                element={<Inscription />}
             />
         </Routes>
      );
