@@ -11,6 +11,7 @@ import TourneysCreated from "../views/Results/TourneysCreated";
 import SignUp from "../views/SignUp/SignUp";
 import TournamentStaff from "../views/TournamentStaff/TournamentStaff";
 import Tourneys from "../views/Tourneys/Tourneys";
+import Inscription from "../views/Inscription/Inscription";
 
 const router = [
     {
@@ -56,6 +57,10 @@ const router = [
             {
                 path: "/tourneys",
                 element: <Tourneys />,
+            },
+            {
+                path: "/inscription",
+                element: <Inscription />,
             }
         ]
     }, {
