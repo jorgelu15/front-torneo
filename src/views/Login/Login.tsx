@@ -4,6 +4,8 @@ import Footer from "../../component/Footer/Footer";
 import Button from "../../component/Button/Button";
 import Input from "../../component/Input/Input";
 import Form from "../../component/Form/Form";
+import { Link } from "react-router-dom";
+import routes from "../../helpers/routes";
 
 interface LoginProps { }
 
@@ -29,7 +31,7 @@ const Login: FC<LoginProps> = () => (
         </div>
         <p>
           <span className="text-gray">¿Primera vez en HyperPlay? </span>
-          <span className="text-white">Registrate Ahora</span>
+          <Link to={routes.signup} className="text-white">Registrate Ahora</Link>
         </p>
       </Form>
     </div>

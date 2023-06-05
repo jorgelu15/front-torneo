@@ -5,6 +5,8 @@ import Button from '../../component/Button/Button';
 import Footer from '../../component/Footer/Footer';
 import Form from '../../component/Form/Form';
 import ContentInputs from '../../component/ContentInputs/ContentInputs';
+import routes from '../../helpers/routes';
+import { Link } from 'react-router-dom';
 
 
 interface SignUpProps {}
@@ -82,8 +84,8 @@ const SignUp: FC<SignUpProps> = () => (
         </div>
 
         <p>
-          <span className="text-gray">¿Primera vez en HyperPlay? </span>
-          <span className="text-white">Registrate Ahora</span>
+          <span className="text-gray">¿Ya tienes cuenta en HyperPlay? </span>
+          <Link to={routes.login} className="text-white">Inicia sesion</Link>
         </p>
       </Form>
     </div>
