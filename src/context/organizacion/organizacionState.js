@@ -91,7 +91,7 @@ const OrganizacionState = props => {
     }
 
     return (
-        <EquiposContext.Provider
+        <OrganizacionContext.Provider
             value={{
                 equipos: state.equipos,
                 equipo: state.equipo,
@@ -104,7 +104,7 @@ const OrganizacionState = props => {
             }}
         >
             {props.children}
-        </EquiposContext.Provider>
+        </OrganizacionContext.Provider>
     )
 }
 

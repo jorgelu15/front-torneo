@@ -8,6 +8,7 @@ export const CERRAR_SESION = 'CERRAR_SESION';
 export const GET_USUARIOS = 'GET_USUARIOS';
 export const GET_USUARIO = 'GET_USUARIO';
 export const EDITAR_USUARIO = 'EDITAR_USUARIO';
+export const BORRAR_USUARIO = 'BORRAR_USUARIO';
 
 export const GET_TORNEOS = 'GET_TORNEOS';
 export const GET_TORNEO = 'GET_TORNEO';

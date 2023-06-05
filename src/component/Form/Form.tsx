@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 
 
 interface FormProps {
+  signIn: () => {};
   tittle: String;
   description?: any;
   children: React.ReactNode;
@@ -9,7 +10,7 @@ interface FormProps {
   width?: string;
 }
 
-const Form: FC<FormProps> = ({tittle, description,height,width, children}) => {
+const Form: FC<FormProps> = ({signIn, tittle, description,height,width, children}) => {
   const aStyle = {
     height: height !== "" ? height : undefined,
     width: width !== "" ? width : undefined
