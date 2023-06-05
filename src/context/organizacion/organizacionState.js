@@ -50,7 +50,21 @@ const OrganizacionState = props => {
 
     const registroOrganizacion = async (datos) => {
         try {
-            const respuesta = await clienteAxios.post(`/organizacion`, datos);
+            const data = {
+                id_usuario: datos.id_usuario,
+                name: datos.nombre,
+                type: datos.tipo,
+                email: datos.email,
+                tel: datos.telefono,
+                redes: JSON.stringify({
+                    twitter: datos.twitter,
+                    youtube: datos.youtube
+                }),
+
+            }
+            const respuesta = await clienteAxios.post(`/organizacion`, data);
+            console.log("alv")
+
             dispatch({
                 type: REGISTRO_ORGANIZACION_EXITOSO,
                 payload: respuesta.data.body.organizacion
