@@ -339,19 +339,21 @@ input[type="file"] {
 .fs40 {
   font-size: 40px;
 }
-.scroll{
+
+.scroll {
   overflow: auto;
   overflow-x: hidden;
 }
+
 .table-container {
-  
+
   & .header-row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 10px;
     font-weight: bold;
     border-bottom: 1px solid #ccc;
-    
+
   }
 
   & .row {
@@ -366,16 +368,19 @@ input[type="file"] {
     align-items: center;
     color: white;
     padding: 10px 0;
-    & img{
+
+    & img {
       width: 40px;
     }
   }
-  & .table-body{
-  max-height: 30vh;
+
+  & .table-body {
+    max-height: 30vh;
   }
 }
 
-.results-view {
+.results-
+ {
   background-color: black;
   background-image: url("/public/img/organizacion.jpg");
   background-repeat: no-repeat;
@@ -393,7 +398,7 @@ input[type="file"] {
 
   & .section-content {
     width: 50%;
-   
+
 
     & h3 {
       border-top: 1px solid #ccc;
@@ -435,4 +440,136 @@ input[type="file"] {
   to {
     transform: rotate(360deg);
   }
+}
+
+.jumbotron {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  top: 0;
+  background-position: center center;
+  background-size: cover;
+  object-fit: cover;
+  margin-bottom: 40px;
+}
+
+.nuestros_proyectos {
+  position: relative;
+  width: 100%;
+  margin: 80px 0;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.nuestros_proyectos h2 {
+  text-align: center;
+}
+
+.nuestros_proyectos .nuestros_proyectos_container {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.nuestros_proyectos .nuestros_proyectos_container .inner_slider {
+  display: flex;
+  overflow: hidden;
+  flex-direction: row;
+  transition: transform 0.5s ease;
+}
+
+.nuestros_proyectos .nuestros_proyectos_container .slide_item {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  flex: 0 0 270px;
+  width: 270px;
+  height: 163px;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+
+.nuestros_proyectos .nuestros_proyectos_container .slide_item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nuestros_proyectos .nuestros_proyectos_container .slide_item .img_info {
+  position: absolute;
+  bottom: 10px;
+  left: 40px;
+}
+
+.nuestros_proyectos .nuestros_proyectos_container .slide_item .img_info .location {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.nuestros_proyectos .nuestros_proyectos_container .slide_item .img_info .location img {
+  width: 16px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.nuestros_proyectos .nuestros_proyectos_container .slide_item .img_info .location p {
+  color: white;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.nuestros_proyectos .nuestros_proyectos_container .slide_item .img_info h2 {
+  color: white;
+  font-size: 20px;
+  margin: 0;
+}
+
+.slider-arrow {
+  cursor: pointer;
+  /* position: absolute; */
+  /* top: 50%; */
+  /* transform: translateY(-50%); */
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  line-height: 36px;
+  transition: background-color 0.3s;
+}
+
+.slider-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.slider-arrow-left {
+  position: absolute;
+  top: 40%;
+  z-index: 10;
+  left: 20px;
+}
+
+.slider-arrow-right {
+  position: absolute;
+  top: 40%;
+  z-index: 10;
+  right: 20px;
 }
