@@ -10,9 +10,9 @@ interface HeaderProps {
 }
 
 const Header: FC<HeaderProps> = ({inicio= false, perfil=false}) => (
-  <div className="jf-se margin-top20px">
+  <div className="jf-se padding-top20px">
     <div className="logo">
-      <img src="./img/HyperPlay.png" alt="" />
+      <img src="../img/HyperPlay.png" alt="" />
     </div>
     <div className="jf-center">
         {inicio && <Link to={routes.home} className='header-right-a'>Inicio</Link>}
