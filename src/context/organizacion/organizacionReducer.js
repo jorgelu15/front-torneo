@@ -22,7 +22,7 @@ export default (state, action) => {
         case REGISTRO_ORGANIZACION_EXITOSO:
             return {
                 ...state,
-                organizaciones: [action.payload, ...state.organizaciones],
+                organizaciones: [action.payload, ...state?.organizaciones],
                 message: "La organización ha sido registrado exitosamente"
             }
         case REGISTRO_ORGANIZACION_ERROR:

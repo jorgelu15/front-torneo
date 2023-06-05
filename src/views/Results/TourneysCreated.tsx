@@ -1,7 +1,9 @@
-import React, { Dispatch, FC, SetStateAction, useEffect } from 'react';
+import React, { Dispatch, FC, SetStateAction, useContext, useEffect } from 'react';
 import Header from '../../component/Header/Header';
 import Table from '../../component/Table/Table';
 import SectionResults from '../SectionResult/SectionResult';
+
+import TorneosContext from '../../context/equipos/equiposContext';
 
 const data = [
     {
@@ -50,10 +52,17 @@ const columns = {
     state: 'Estado'
 };
 
-const rows = data.map((item) => ({ row: item }));
 interface ResultsProps { }
 
 const Results: FC<ResultsProps> = ({ }) => {
+    
+    const torneosContext = useContext(TorneosContext);
+    const {torneos, getTorneos } = torneosContext;
+    const rows = torneos?.map((item:any) => ({ row: item }));
+
+    useEffect(() => {
+        getTorneos();
+    }, [])
 
     return (
         <SectionResults
