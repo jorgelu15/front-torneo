@@ -1,10 +1,10 @@
-import { FC, useContext, useState } from "react";
+import { FC, useContext, useState, useEffect } from "react";
 import Header from "../../component/Header/Header";
 import Footer from "../../component/Footer/Footer";
 import Button from "../../component/Button/Button";
 import Input from "../../component/Input/Input";
 import Form from "../../component/Form/Form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import routes from "../../helpers/routes";
 
 import AuthContext from "../../context/authentication/authContext";
@@ -12,9 +12,18 @@ import AuthContext from "../../context/authentication/authContext";
 interface LoginProps { }
 
 const Login: FC<LoginProps> = () => {
-
   const authContext = useContext(AuthContext);
-  const { signIn } = authContext;
+  const { autenticado, signIn } = authContext;
+
+  let location = useLocation();
+  let navigate = useNavigate();
+
+  let from = location.state?.from?.pathname || routes.login;
+
+  //useEffect para validar si existe una sesion abierta
+  useEffect(() => {
+    if (autenticado) navigate(routes.home);
+  }, [autenticado, navigate, from]);
 
   const [datos, setDatos] = useState({
     email: "",
@@ -32,7 +41,6 @@ const Login: FC<LoginProps> = () => {
 
   const handlerSignIn = (e:any): void => {
     e.preventDefault();
-    // console.log("alv")
     signIn(datos)
   }
 
@@ -41,7 +49,7 @@ const Login: FC<LoginProps> = () => {
       <Header />
 
       <div className="jf-center div-form">
-        <Form tittle="Iniciar Sesión" signIn={handlerSignIn} email={email} password={password}>
+        <Form tittle="Iniciar Sesión" onSubmit={handlerSignIn}>
           <Input
             className="w100 input"
             type="text"

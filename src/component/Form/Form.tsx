@@ -6,19 +6,17 @@ interface FormProps {
   children: React.ReactNode;
   height?: string;
   width?: string;
-  signIn?: (e:any) => void;
-  email?: string;
-  password?: string;
+  onSubmit?: (e:any) => void;
 }
 
-const Form: FC<FormProps> = ({tittle, description,height,width, children, signIn, email, password}) => {
+const Form: FC<FormProps> = ({tittle, description,height,width, children, onSubmit}) => {
   const aStyle = {
     height: height !== "" ? height : undefined,
     width: width !== "" ? width : undefined
   };
   
   return (
-  <form onSubmit={signIn} className='form jf-sb fd-column ai-start' style={aStyle}>
+  <form onSubmit={onSubmit} className='form jf-sb fd-column ai-start' style={aStyle}>
     <h2 className='form-tittle text-bold'>{tittle}</h2>
     {description && <p className='text-gray' style={{"marginBottom":"12px"}}>{description}</p>}
     {children}

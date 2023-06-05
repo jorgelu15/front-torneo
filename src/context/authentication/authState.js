@@ -48,12 +48,25 @@ const AuthState = props => {
     }
 
     const signUp = async datos => {
+        const data = {
+            nit: datos.nit,
+            nickname: datos.nombre_usuario,
+            name: datos.nombre,
+            lastname: datos.apellido,
+            telephone: datos.celular,
+            country: datos.pais,
+            city: datos.ciudad,
+            birthdate: "" + datos.anio + "-" + datos.mes + "-" + datos.dia,
+            email: datos.email,
+            password: datos.password,
+            role: datos.tipo,
+        }
         try {
-            const respuesta = await clienteAxios.post('/usuarios', datos);
-            dispatch({
-                type: REGISTRO_EXITOSO,
-                payload: respuesta.data
-            })
+            const respuesta = await clienteAxios.post('/usuarios', data);
+            // dispatch({
+            //     type: REGISTRO_EXITOSO,
+            //     payload: respuesta.data
+            // })
         } catch (error) {
             const msg = {
                 msg: error.response.data.msg,

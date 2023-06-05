@@ -21,13 +21,13 @@ const ContentInputs: FC<ContentInputsProps> = ({id,width, children }) => {
                   }
             })
         }
-        console.log(childrenNodes);
+        // console.log(childrenNodes);
     },[id]);
 
     const aStyle = {
         width: width !== "" ? width : undefined
     };
-    console.log(id, width);
+    // console.log(id, width);
     return (
         <div id={id} className='contentInput jf-sb' style={aStyle}>
             {children}
