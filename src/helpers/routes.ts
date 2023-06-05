@@ -9,6 +9,7 @@ const routes = {
     organizer: "/organizer",
     tournamentstaff: "/tournament-staff",
     tourneys: "/tourneys",
-    tourneysCreated: "/results/tourneys-created"
+    tourneysCreated: "/results/tourneys-created",
+    inscription: "/inscription"
 }
 export default routes;
