@@ -30,8 +30,10 @@ const Login: FC<LoginProps> = () => {
     });
   };
 
-  const handlerSignIn = (): void => {
-    signIn()
+  const handlerSignIn = (e:any): void => {
+    e.preventDefault();
+    // console.log("alv")
+    signIn(datos)
   }
 
   return (
@@ -39,7 +41,7 @@ const Login: FC<LoginProps> = () => {
       <Header />
 
       <div className="jf-center div-form">
-        <Form tittle="Iniciar Sesión" signIn={handlerSignIn}>
+        <Form tittle="Iniciar Sesión" signIn={handlerSignIn} email={email} password={password}>
           <Input
             className="w100 input"
             type="text"
@@ -68,7 +70,6 @@ const Login: FC<LoginProps> = () => {
           </p>
         </Form>
       </div>
-
       <Footer />
     </div>
   )

@@ -19,11 +19,11 @@ const Button: FC<ButtonProps> = ({width,height,padding,display,margin, children}
     margin: margin !== "" ? margin : undefined
   };
   return (
-  <div style={aStyle}>
+  <button style={aStyle}>
     <div className='button-blue jf-center text-bold'>
     <span>{children}</span>
     </div>
-  </div>
+  </button>
 )};
 
 export default Button;

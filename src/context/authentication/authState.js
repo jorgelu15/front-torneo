@@ -29,6 +29,7 @@ const AuthState = props => {
     const signIn = async datos => {
         try {
             const respuesta = await clienteAxios.post('/auth', datos);
+            console.log(respuesta)
             dispatch({
                 type: LOGIN_EXITOSO,
                 payload: respuesta.data
