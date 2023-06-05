@@ -2,15 +2,15 @@ import React, { FC } from 'react';
 
 
 interface FormProps {
-  signIn: () => {};
   tittle: String;
   description?: any;
   children: React.ReactNode;
   height?: string;
   width?: string;
+  signIn?: () => void;
 }
 
-const Form: FC<FormProps> = ({signIn, tittle, description,height,width, children}) => {
+const Form: FC<FormProps> = ({tittle, description,height,width, children, signIn}) => {
   const aStyle = {
     height: height !== "" ? height : undefined,
     width: width !== "" ? width : undefined

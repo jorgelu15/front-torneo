@@ -21,53 +21,53 @@ const Login: FC<LoginProps> = () => {
     password: "",
   });
 
-  const { email, password} = datos;
+  const { email, password } = datos;
 
-  const onChange = (e:any) => {
+  const onChange = (e: any) => {
     setDatos({
       ...datos,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handlerSignIn = () => {
-
+  const handlerSignIn = (): void => {
+    signIn()
   }
 
   return (
     <div className="fondo1 view">
       <Header />
 
-    <div className="jf-center div-form">
-      <Form tittle="Iniciar Sesión" signIn={handlerSignIn}>
-        <Input
-          className="w100 input"
-          type="text"
-          placeholder="Usuario"
-          name="email"
-          id="email"
-          value={email}
-          onChange={onChange}
-        />
-        <Input
-          helperText="la contraseña debe tener entre 4 y 60 caracteres."
-          className="w100 input"
-          type="password"
-          placeholder="Contraseña"
-          name="password"
-          id="password"
-          value={password}
-          onChange={onChange}
-        />
-        <div className="form-div text-bold w100 margin-top20px">
-          <Button width='100%'>Iniciar Sesión</Button>
-        </div>
-        <p>
-          <span className="text-gray">¿Primera vez en HyperPlay? </span>
-          <Link to={routes.signup} className="text-white">Registrate Ahora</Link>
-        </p>
-      </Form>
-    </div>
+      <div className="jf-center div-form">
+        <Form tittle="Iniciar Sesión" signIn={handlerSignIn}>
+          <Input
+            className="w100 input"
+            type="text"
+            placeholder="Usuario"
+            name="email"
+            id="email"
+            value={email}
+            onChange={onChange}
+          />
+          <Input
+            helperText="la contraseña debe tener entre 4 y 60 caracteres."
+            className="w100 input"
+            type="password"
+            placeholder="Contraseña"
+            name="password"
+            id="password"
+            value={password}
+            onChange={onChange}
+          />
+          <div className="form-div text-bold w100 margin-top20px">
+            <Button width='100%'>Iniciar Sesión</Button>
+          </div>
+          <p>
+            <span className="text-gray">¿Primera vez en HyperPlay? </span>
+            <Link to={routes.signup} className="text-white">Registrate Ahora</Link>
+          </p>
+        </Form>
+      </div>
 
       <Footer />
     </div>
