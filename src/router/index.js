@@ -6,6 +6,8 @@ import DashBoard from "../views/DashBoard/DashBoard";
 import Home from "../views/Home/Home";
 import Login from "../views/Login/Login";
 import Organizer from "../views/Organizer/Organizer";
+import Results from "../views/Results/Results";
+import TourneysCreated from "../views/Results/TourneysCreated";
 import SignUp from "../views/SignUp/SignUp";
 import TournamentStaff from "../views/TournamentStaff/TournamentStaff";
 import Tourneys from "../views/Tourneys/Tourneys";
@@ -54,6 +56,16 @@ const router = [
             {
                 path: "/tourneys",
                 element: <Tourneys />,
+            }
+        ]
+    }, {
+
+        path: "/results",
+        element: <Results />,
+        children: [
+            {
+                path: "/results/tourneys-created",
+                element: <TourneysCreated />,
             }
         ]
     }
