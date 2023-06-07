@@ -63,7 +63,7 @@ const OrganizacionState = props => {
 
             }
             const respuesta = await clienteAxios.post(`/organizacion`, data);
-            console.log("alv")
+            // console.log("alv")
 
             dispatch({
                 type: REGISTRO_ORGANIZACION_EXITOSO,
